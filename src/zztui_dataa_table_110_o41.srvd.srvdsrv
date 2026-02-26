@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZZTC_DATAA_TABLE_1101'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZZTC_DATAA_TABLE_1101'
+  }
+}
+define service ZZTUI_DATAA_TABLE_110_O41 provider contracts odata_v4_ui {
+  expose ZZTC_DATAA_TABLE_1101;
+}

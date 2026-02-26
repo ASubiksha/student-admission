@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZTR_DATAA_TABLE_1101'
+@MappingRole: true
+define role ZZTR_DATAA_TABLE_1101 {
+  grant select on ZZTR_DATAA_TABLE_1101
+  where TRUE;
+}

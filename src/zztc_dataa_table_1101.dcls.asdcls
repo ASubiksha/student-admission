@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZTC_DATAA_TABLE_1101'
+@MappingRole: true
+define role ZZTC_DATAA_TABLE_1101 {
+  grant select on ZZTC_DATAA_TABLE_1101
+  where INHERITING CONDITIONS FROM ENTITY ZZTR_DATAA_TABLE_1101 REPLACING { ROOT WITH _BaseEntity };
+}

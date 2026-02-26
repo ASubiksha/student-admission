@@ -1,0 +1,58 @@
+managed implementation in class ZZTBP_R_DATAA_TABLE_1101 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZZTR_DATAA_TABLE_1101 alias ZztrDataaTable1101
+persistent table ZDATAA_TABLE_110
+extensible
+draft table ZZTDTA_TBLE_1_D1
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   StudentID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   StudentID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZDATAA_TABLE_110 corresponding extensible
+  {
+    StudentID = STUDENT_ID;
+    Firstname = FIRSTNAME;
+    Lastname = LASTNAME;
+    Gender = GENDER;
+    Dob = DOB;
+    Email = EMAIL;
+    Phone = PHONE;
+    Address = ADDRESS;
+    Course = COURSE;
+    Department = DEPARTMENT;
+    AdmissionDate = ADMISSION_DATE;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}
